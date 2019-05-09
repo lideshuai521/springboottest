@@ -1,7 +1,8 @@
 package com.lideshuai.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author lds
@@ -9,12 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
  * @Package: com.lideshuai.controller
  * @date 2019/5/8 0008 下午 6:43
  **/
-@RestController
+@Controller
 public class LoginController {
 
     @RequestMapping("/login")
-    public String login(){
+    public String login() {
+        System.out.println("进入登录页面");
+        return "login";
+    }
 
-        return "jenkins 测试成功";
+    @RequestMapping("/index")
+    public String index(ModelMap map) {
+
+        return "index";
     }
 }
