@@ -1,89 +1,52 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+﻿<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>layout 后台大布局 - Layui</title>
-    <link th:href="@{/css/layui.css}" rel="stylesheet"/>
+<meta charset="utf-8"></meta>
+  <link rel="stylesheet" href="../css/login.css"></link>
+  <title>jQuery注册登录改密表单代码 - 站长素材</title>
+<script src="../js/jquery-2.1.1.min.js"></script>
+
 </head>
-<body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
-    <div class="layui-header">
-        <div class="layui-logo">layui 后台布局</div>
-        <!-- 头部区域（可配合layui已有的水平导航） -->
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
-            <li class="layui-nav-item"><a href="">商品管理</a></li>
-            <li class="layui-nav-item"><a href="">用户</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">其它系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">邮件管理</a></dd>
-                    <dd><a href="">消息管理</a></dd>
-                    <dd><a href="">授权管理</a></dd>
-                </dl>
-            </li>
-        </ul>
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
-        </ul>
-    </div>
+<body>
 
-    <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
-            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">所有商品</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="javascript:;">列表三</a></dd>
-                        <dd><a href="">超链接</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="">超链接</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">发布商品</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <iframe src="https://www.baidu.com/" frameborder="0" height="100%" width="100%"></iframe>
-    </div>
-
-    <div class="layui-footer">
-        <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
-    </div>
+<div class="wrap flex-c-c">
+  <form action="" method="" class="flex-c-c">
+    <ul class="select__list">
+      <li id="js-usr-rtn" class="select__label">登录</li>
+      <li id="js-usr-new" class="select__label select__label--active">注册</li>
+      <li id="js-usr-rst" class="select__label">忘记密码</li>
+    </ul>
+    <span class="pointer"></span>
+    <input type="email" placeholder="邮箱" class="ui-field" id="js-field__email" />
+    <input type="password" placeholder="密码" class="ui-field" id="js-field__pass" />
+    <input type="password" placeholder="确认密码" class="ui-field" id="js-field__r-pass" />
+    <button id="js-btn" class="ui-button --usr-new"></button>
+  </form>
 </div>
-<script src="layui.js"></script>
-<link th:href="@{/layui.js}" rel="stylesheet"/>
-<script>
-    //JavaScript代码区域
-    layui.use('element', function(){
-        var element = layui.element;
 
-    });
+<script>
+//to-do. dry-up remove jq
+$('.select__label').click(function() {
+  $('.select__label').removeClass('select__label--active');
+  $(this).addClass('select__label--active');
+});
+
+$('#js-usr-rtn').click(function() {
+  $('#js-btn, .pointer, #js-field__pass').removeClass('--usr-new --usr-rst ui-field--hidden');
+  $('#js-btn, .pointer').addClass('--usr-rtn');
+  $('#js-field__r-pass').addClass('ui-field--hidden');
+});
+$('#js-usr-new').click(function() {
+  $('#js-btn, .pointer, #js-field__r-pass, #js-field__pass').removeClass('--usr-rtn --usr-rst ui-field--hidden');
+  $('#js-btn').addClass('--usr-new');
+});
+$('#js-usr-rst').click(function() {
+  $('#js-btn, .pointer').removeClass('--usr-rtn --usr-new');
+  $('#js-btn, .pointer').addClass('--usr-rst');
+  $('#js-field__r-pass, #js-field__pass').addClass('ui-field--hidden');
+});
 </script>
+
 </body>
 </html>
+
