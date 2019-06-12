@@ -1,6 +1,6 @@
-package com.wyait.manage.dao;
+package com.lideshuai.dao;
 
-import com.wyait.manage.pojo.UserRoleKey;
+import com.lideshuai.pojo.UserRoleKey;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,6 +1,7 @@
-package com.wyait.manage.entity;
+package com.lideshuai.entity;
 
-import com.wyait.manage.utils.IStatusMessage;
+
+import com.lideshuai.utils.IStatusMessage;
 
 import java.io.Serializable;
 

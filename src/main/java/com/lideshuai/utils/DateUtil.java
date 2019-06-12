@@ -1,4 +1,4 @@
-package com.wyait.manage.utils;
+package com.lideshuai.utils;
 
 import java.io.ObjectStreamException;
 import java.io.Serializable;

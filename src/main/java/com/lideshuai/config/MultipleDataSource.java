@@ -1,4 +1,4 @@
-package com.wyait.manage.config;
+package com.lideshuai.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.MutablePropertyValues;
@@ -35,7 +35,7 @@ import java.util.Map.Entry;
  */
 //@Configuration
 @SuppressWarnings("unchecked")
-public class MultipleDataSource implements BeanDefinitionRegistryPostProcessor,EnvironmentAware{
+public class MultipleDataSource implements BeanDefinitionRegistryPostProcessor, EnvironmentAware {
     //作用域对象.
     private ScopeMetadataResolver scopeMetadataResolver = new AnnotationScopeMetadataResolver();
     //bean名称生成器.

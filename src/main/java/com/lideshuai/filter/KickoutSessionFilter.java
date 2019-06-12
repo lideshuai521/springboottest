@@ -1,20 +1,11 @@
-package com.wyait.manage.filter;
-
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.Serializable;
-import java.util.ArrayDeque;
-import java.util.Deque;
-
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
+package com.lideshuai.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wyait.manage.entity.ResponseResult;
-import com.wyait.manage.pojo.User;
-import com.wyait.manage.utils.IStatusMessage;
-import com.wyait.manage.utils.ShiroFilterUtils;
+
+import com.lideshuai.entity.ResponseResult;
+import com.lideshuai.pojo.User;
+import com.lideshuai.utils.IStatusMessage;
+import com.lideshuai.utils.ShiroFilterUtils;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.session.Session;
@@ -25,6 +16,15 @@ import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Serializable;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 
@@ -72,13 +72,13 @@ public class KickoutSessionFilter extends AccessControlFilter {
 
 	@Override
 	protected boolean isAccessAllowed(ServletRequest request,
-			ServletResponse response, Object mappedValue) throws Exception {
+                                      ServletResponse response, Object mappedValue) throws Exception {
 		return false;
 	}
 
 	@Override
 	protected boolean onAccessDenied(ServletRequest request,
-			ServletResponse response) throws Exception {
+                                     ServletResponse response) throws Exception {
 		Subject subject = getSubject(request, response);
 		// 没有登录授权 且没有记住我
 		if (!subject.isAuthenticated() && !subject.isRemembered()) {
@@ -209,7 +209,7 @@ public class KickoutSessionFilter extends AccessControlFilter {
 	}
 
 	private boolean isAjaxResponse(ServletRequest request,
-			ServletResponse response) throws IOException {
+                                   ServletResponse response) throws IOException {
 		// ajax请求
 		/**
 		 * 判断是否已经踢出

@@ -1,4 +1,4 @@
-package com.wyait.manage.config;
+package com.lideshuai.config;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;

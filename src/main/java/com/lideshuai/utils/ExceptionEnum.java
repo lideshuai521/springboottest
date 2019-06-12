@@ -1,4 +1,4 @@
-package com.wyait.manage.utils;
+package com.lideshuai.utils;
 /**
  * 
  * @项目名称：wyait-manage

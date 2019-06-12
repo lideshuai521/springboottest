@@ -1,13 +1,14 @@
-package com.wyait.manage.service;
+package com.lideshuai.service;
 
-import com.wyait.manage.dao.PermissionMapper;
-import com.wyait.manage.dao.RoleMapper;
-import com.wyait.manage.dao.RolePermissionMapper;
-import com.wyait.manage.entity.PermissionVO;
-import com.wyait.manage.entity.RoleVO;
-import com.wyait.manage.pojo.Permission;
-import com.wyait.manage.pojo.Role;
-import com.wyait.manage.pojo.RolePermissionKey;
+
+import com.lideshuai.dao.PermissionMapper;
+import com.lideshuai.dao.RoleMapper;
+import com.lideshuai.dao.RolePermissionMapper;
+import com.lideshuai.entity.PermissionVO;
+import com.lideshuai.entity.RoleVO;
+import com.lideshuai.pojo.Permission;
+import com.lideshuai.pojo.Role;
+import com.lideshuai.pojo.RolePermissionKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

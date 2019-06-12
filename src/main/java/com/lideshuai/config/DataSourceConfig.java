@@ -5,8 +5,8 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -16,15 +16,17 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 /**
- * @author lds
- * @Title: DataSourceConfig
- * @Package: com.lideshuai.config
- * @date 2019/5/10 0010 下午 3:59
- **/
+ * @项目名称：wyait-common
+ * @包名：com.wyait.manage.config
+ * @类描述：数据源配置
+ * @创建人：wyait
+ * @创建时间：2018-02-27 13:33
+ * @version：V1.0
+ */
 @Configuration
+//指明了扫描dao层，并且给dao层注入指定的SqlSessionTemplate
 @MapperScan(basePackages = "com.lideshuai.dao", sqlSessionTemplateRef  = "testSqlSessionTemplate")
 public class DataSourceConfig {
-
     /**
      * 创建datasource对象
      * @return
@@ -78,5 +80,4 @@ public class DataSourceConfig {
     public SqlSessionTemplate testSqlSessionTemplate(@Qualifier("testSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
-
 }

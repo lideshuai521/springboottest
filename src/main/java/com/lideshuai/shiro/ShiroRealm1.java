@@ -32,10 +32,10 @@ import java.util.List;
  * @version：V1.0
  */
 @Service
-public class ShiroRealm extends AuthorizingRealm {
+public class ShiroRealm1 extends AuthorizingRealm {
 
 	private static final Logger logger = LoggerFactory
-			.getLogger(ShiroRealm.class);
+			.getLogger(ShiroRealm1.class);
 	@Autowired
 	private UserMapper userMapper;
 	@Autowired

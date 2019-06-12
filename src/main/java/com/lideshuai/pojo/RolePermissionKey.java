@@ -1,4 +1,4 @@
-package com.wyait.manage.pojo;
+package com.lideshuai.pojo;
 
 public class RolePermissionKey {
     private Integer permitId;

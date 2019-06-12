@@ -1,11 +1,11 @@
-package com.wyait.manage.interceptor;
+package com.lideshuai.interceptor;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.lideshuai.entity.ResponseResult;
+import com.lideshuai.pojo.User;
+import com.lideshuai.service.UserService;
+import com.lideshuai.utils.IStatusMessage;
+import com.lideshuai.utils.ShiroFilterUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.web.util.WebUtils;
@@ -15,12 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wyait.manage.entity.ResponseResult;
-import com.wyait.manage.pojo.User;
-import com.wyait.manage.service.UserService;
-import com.wyait.manage.utils.IStatusMessage;
-import com.wyait.manage.utils.ShiroFilterUtils;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * 

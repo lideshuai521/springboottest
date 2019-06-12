@@ -1,10 +1,12 @@
-package com.wyait.manage.dao;
+package com.lideshuai.dao;
 
-import com.wyait.manage.entity.RoleVO;
-import com.wyait.manage.pojo.Role;
+
+import com.lideshuai.entity.RoleVO;
+import com.lideshuai.pojo.Role;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface RoleMapper {

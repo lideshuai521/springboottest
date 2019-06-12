@@ -1,6 +1,6 @@
-package com.wyait.manage.entity;
+package com.lideshuai.entity;
 
-import com.wyait.manage.pojo.UserRoleKey;
+import com.lideshuai.pojo.UserRoleKey;
 
 import java.util.List;
 

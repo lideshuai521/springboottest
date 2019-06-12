@@ -1,4 +1,4 @@
-package com.wyait.manage.utils;
+package com.lideshuai.utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;

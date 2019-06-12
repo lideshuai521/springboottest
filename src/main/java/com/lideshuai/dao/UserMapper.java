@@ -1,13 +1,15 @@
-package com.wyait.manage.dao;
+package com.lideshuai.dao;
 
-import com.wyait.manage.entity.UserRoleDTO;
-import com.wyait.manage.entity.UserRolesVO;
-import com.wyait.manage.entity.UserSearchDTO;
-import com.wyait.manage.pojo.User;
+
+import com.lideshuai.entity.UserRoleDTO;
+import com.lideshuai.entity.UserRolesVO;
+import com.lideshuai.entity.UserSearchDTO;
+import com.lideshuai.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface UserMapper {
@@ -36,7 +38,7 @@ public interface UserMapper {
 	 * @return
 	 */
 	int setDelUser(@Param("id") Integer id, @Param("isDel") Integer isDel,
-			@Param("insertUid") Integer insertUid);
+                   @Param("insertUid") Integer insertUid);
 
 	/**
 	 * 设置用户是否离职
@@ -45,7 +47,7 @@ public interface UserMapper {
 	 * @return
 	 */
 	int setJobUser(@Param("id") Integer id, @Param("isJob") Integer isJob,
-			@Param("insertUid") Integer insertUid);
+                   @Param("insertUid") Integer insertUid);
 
 	/**
 	 * 查询用户及对应的角色
@@ -61,7 +63,7 @@ public interface UserMapper {
 	 * @return
 	 */
 	User findUser(@Param("username") String username,
-			@Param("password") String password);
+                  @Param("password") String password);
 
 	/**
 	 *	根据手机号获取用户数据
@@ -92,4 +94,6 @@ public interface UserMapper {
 	 * @return
 	 */
 	int setUserLockNum(@Param("id") Integer id, @Param("isLock") int isLock);
+
+    Map<String, Map<String, Object>> findUserList();
 }

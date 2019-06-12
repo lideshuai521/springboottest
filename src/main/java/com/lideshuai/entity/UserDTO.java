@@ -1,4 +1,4 @@
-package com.wyait.manage.entity;
+package com.lideshuai.entity;
 
 import net.sf.oval.constraint.MatchPattern;
 import net.sf.oval.constraint.NotNull;

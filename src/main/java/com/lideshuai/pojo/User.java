@@ -1,4 +1,4 @@
-package com.wyait.manage.pojo;
+package com.lideshuai.pojo;
 
 import java.io.Serializable;
 import java.util.Date;

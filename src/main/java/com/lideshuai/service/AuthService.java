@@ -1,9 +1,11 @@
-package com.wyait.manage.service;
+package com.lideshuai.service;
 
-import com.wyait.manage.entity.PermissionVO;
-import com.wyait.manage.entity.RoleVO;
-import com.wyait.manage.pojo.Permission;
-import com.wyait.manage.pojo.Role;
+
+
+import com.lideshuai.entity.PermissionVO;
+import com.lideshuai.entity.RoleVO;
+import com.lideshuai.pojo.Permission;
+import com.lideshuai.pojo.Role;
 
 import java.util.List;
 

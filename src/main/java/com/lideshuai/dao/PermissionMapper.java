@@ -1,7 +1,8 @@
-package com.wyait.manage.dao;
+package com.lideshuai.dao;
 
-import com.wyait.manage.entity.PermissionVO;
-import com.wyait.manage.pojo.Permission;
+
+import com.lideshuai.entity.PermissionVO;
+import com.lideshuai.pojo.Permission;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

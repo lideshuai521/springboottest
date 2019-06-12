@@ -1,4 +1,4 @@
-package com.wyait.manage.config;
+package com.lideshuai.config;
 
 import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpRequest;

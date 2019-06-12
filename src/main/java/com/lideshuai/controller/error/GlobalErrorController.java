@@ -1,12 +1,15 @@
-package com.wyait.manage.web.error;
+package com.lideshuai.controller.error;
 
-import com.wyait.manage.utils.ExceptionEnum;
-import com.wyait.manage.utils.Result;
+
+import com.lideshuai.utils.ExceptionEnum;
+import com.lideshuai.utils.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.boot.autoconfigure.web.AbstractErrorController;
 import org.springframework.boot.autoconfigure.web.ErrorAttributes;
 import org.springframework.boot.autoconfigure.web.ErrorProperties;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -49,7 +52,7 @@ public class GlobalErrorController extends AbstractErrorController {
 
 	@RequestMapping(produces = "text/html")
 	public ModelAndView errorHtml(HttpServletRequest request,
-			HttpServletResponse response) {
+                                  HttpServletResponse response) {
 		logger.debug("统一异常处理【" + getClass().getName()
 				+ ".errorHtml】text/html=普通请求：request=" + request);
 		ModelAndView mv = new ModelAndView(ERROR_PATH);
@@ -79,7 +82,7 @@ public class GlobalErrorController extends AbstractErrorController {
 	@RequestMapping
 	@ResponseBody
 	//设置响应状态码为：200，结合前端约定的规范处理。也可不设置状态码，前端ajax调用使用error函数进行控制处理
-	@ResponseStatus(value=HttpStatus.OK)
+	@ResponseStatus(value= HttpStatus.OK)
 	public Result<String> error(HttpServletRequest request, Exception e) {
 		logger.info("统一异常处理【" + getClass().getName()
 				+ ".error】text/html=普通请求：request=" + request );
@@ -133,7 +136,7 @@ public class GlobalErrorController extends AbstractErrorController {
 	}
 
 	private boolean isIncludeStackTrace(HttpServletRequest request,
-			MediaType produces) {
+                                        MediaType produces) {
 		ErrorProperties.IncludeStacktrace include = getErrorProperties().getIncludeStacktrace();
 		if (include == ErrorProperties.IncludeStacktrace.ALWAYS) {
 			return true;

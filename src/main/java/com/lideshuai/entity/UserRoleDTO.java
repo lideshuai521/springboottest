@@ -1,4 +1,4 @@
-package com.wyait.manage.entity;
+package com.lideshuai.entity;
 
 public class UserRoleDTO {
 	private Integer id;

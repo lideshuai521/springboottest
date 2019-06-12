@@ -1,14 +1,13 @@
-package com.wyait.manage.utils;
+package com.lideshuai.utils;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lideshuai.entity.ResponseResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wyait.manage.entity.ResponseResult;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.PrintWriter;
 
 /**

@@ -1,4 +1,4 @@
-package com.wyait.manage.entity;
+package com.lideshuai.entity;
 
 /**
  * @项目名称：wyait-manage

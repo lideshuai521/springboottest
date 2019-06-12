@@ -1,4 +1,4 @@
-package com.wyait.manage.utils;
+package com.lideshuai.utils;
 
 import org.apache.commons.lang3.StringUtils;
 

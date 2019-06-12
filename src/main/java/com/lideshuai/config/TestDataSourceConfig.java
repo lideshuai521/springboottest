@@ -1,4 +1,4 @@
-package com.wyait.manage.config;
+package com.lideshuai.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -24,7 +24,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 //指明了扫描dao层，并且给dao层注入指定的SqlSessionTemplate
-@MapperScan(basePackages = "com.wyait.manage.test1", sqlSessionTemplateRef  = "test1SqlSessionTemplate")
+@MapperScan(basePackages = "com.lideshuai.test1", sqlSessionTemplateRef  = "test1SqlSessionTemplate")
 public class TestDataSourceConfig {
 	/**
 	 * 创建datasource对象
@@ -47,7 +47,7 @@ public class TestDataSourceConfig {
 		SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
 		bean.setDataSource(dataSource);
 		//对应mybatis.type-aliases-package配置
-		bean.setTypeAliasesPackage("com.wyait.manage.pojo");
+		bean.setTypeAliasesPackage("com.lideshuai.pojo");
 		bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*.xml"));
 		//开启驼峰映射
 		bean.getObject().getConfiguration().setMapUnderscoreToCamelCase(true);

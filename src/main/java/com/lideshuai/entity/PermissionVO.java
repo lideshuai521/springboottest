@@ -1,4 +1,4 @@
-package com.wyait.manage.entity;
+package com.lideshuai.entity;
 
 import java.io.Serializable;
 
